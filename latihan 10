@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+int pangkat (int x, int y)
+{
+    if (y == 0)
+    {
+        return 1;
+    }
+    else
+        { 
+            return x * pangkat (x, y - 1);
+        }
+}
+
+int main()
+{
+    int x, y;
+    printf ("Masukan bilangan yang akan dipangkatkan = ");
+    scanf ("%d", &x);
+    printf ("\nPangkat Bilangan = ");
+    scanf ("%d", &y);
+    printf ("Hasil bilangan %d pangkat %d adalah %d", x, y, pangkat (x, y));
+    getchar();
+    return 0;   
+}
+
+#include <iostream>
+using namespace std;
+void tambah (int*c,int*d){
+  *c+=7;
+  *d+=5;
+  cout<<endl;
+  cout<<"\nNilai di akhir fungsi tambah()";
+  cout<<"\nc="<<*c<<"d="<<*d;
+}
+int main(){
+    int a,b,c,d;
+    a=4;
+    b=6;
+    cout<<"Nilai sebelum pemanggilan fungsi = ";
+    cout<<"\na="<<a<<"b="<<b;
+    tambah(&a,&b);
+      cout<<endl;
+    cout<<"\nNilai setelah pemanggilan fungsi = ";
+    cout<<"na="<<a<<"b="<<b;
+    getchar();
+  return 0;
+}
